@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/jquery.bxslider.css">
+
+    <style>
+        #wrapper{
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <title>bxslider플러그인</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="bxslider">
+            <div>
+                <img src="/img/bg1.jpeg" alt="" title="첫번째 이미지">
+            </div>
+            <div>
+                <img src="/img/bg2.jpeg" alt="" title="두째 이미지">
+            </div>
+            <div>
+                <img src="/img/bg3.jpeg" alt="" title="세번째 이미지">
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/jquery.bxslider.js"></script>
+    <script>
+        $(function(){
+            $('.bxslider').bxSlider({
+                sliderWidth:600,
+                captions:true,
+                auto:true,
+                autoControls:true,
+                stopAutoOnclick:true,
+            });
+        });
+    </script>
+</body>
+</html>
