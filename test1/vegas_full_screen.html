@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/vegas.min.css">
+    
+
+    <!-- html5의 새로운 요소를 지원해주지 못하는 브라우저나 구버전의 익스플로러가 html5 요소를 지원해주는 기능 -->
+    <!--[if lt IE 9]>
+	<script src="/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <title>vegas.js 플러그인 풀스크린</title>
+    <style>
+        #content{
+            position:absolute;
+            width: 60%;
+            left: 10%;
+            bottom: 40%;
+            
+            background-color:rgba(0,0,0,0.2);
+            color: #fff;
+            font-size: 30px;
+
+        }
+        #content a{ 
+            text-decoration: none;
+            color: #fff;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>  
+    <div id="content">
+        <h1>Fullscreen Background Image</h1>
+        <p><strong><a href="http://vegas.jaysalvat.com/">Vegas.js 플러그인을 이용한 <br>풀스크린 배경 이미지.</a></strong></p>
+    </div>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/vegas.min.js"></script>
+    <script>
+        $(function(){
+            $('body').vegas({
+                slides:[
+                    {src:'../img/bg1.jpeg'},
+                    {src:'../img/bg2.jpeg'},
+                    {src:'../img/bg3.jpeg'},
+                    // 동영상 사용
+                    {src:'../img/test.jpeg',
+                        video:{
+                            src:['videos/test.mp4'],
+                            loop:false,
+                            mute:true,
+                        }
+                }
+                ],
+                delay:3500 
+            })
+        });
+    </script>
+</body>
+</html>
